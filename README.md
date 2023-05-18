@@ -13,18 +13,18 @@ tools needed:
 1. find python app + db + tests if possible (was looking into: https://github.com/jennielees/flask-sqlalchemy-example  haven't tested it)
 2. fork/repush it somewhere to your space
 
-3. Jenkins is our CI tool
+#### Jenkins
 
-create deploy.sh script which will deploy jenkins helm chart to local kubernetes(docker-deploy)
+1. create deploy.sh script which will deploy jenkins helm chart to local kubernetes(docker-deploy)
 should be preinstalled plugins
 * casc plugin
 * jobdsl plugin
 
-4. create job configuration via jobdsl (casc) with `pipeline` type
+2. create job configuration via jobdsl (casc) with `pipeline` type
 * git -> should be pointed to your repo with APP
 * creds - missed for now
 
-5. change jenkins welcome message to "Hi, its version '$VAR_NAME'"
+3. change jenkins welcome message to "Hi, its version '$VAR_NAME'"
 
 where $VAR_NAME - variable from deploy.sh script like
 
